@@ -15,6 +15,10 @@ const AppState = props => {
 
     // component actions here!!!
     const getSearchItem = () => {
+        
+    };
+
+    const getItemCollection = () => {
         let items = [
             {
                 "id": "test",
@@ -61,10 +65,6 @@ const AppState = props => {
             type: GET_ITEMS,
             payload: items
         });
-    };
-
-    const getItemCollection = () => {
-
     };
 
 
