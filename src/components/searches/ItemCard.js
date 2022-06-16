@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const ItemCard = ({ searchItem: { productName, productImg, productPrice, productLink } }) => {
+    const defaultImg = '';
     return (
         <div className="card text-center">
             <img
