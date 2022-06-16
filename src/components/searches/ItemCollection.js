@@ -8,6 +8,8 @@ const ItemCollection = () => {
     const { itemCollection, getItemCollection } = appContext;
 
     useEffect(() => {
+        console.log("Item collection current state:")
+        console.log(itemCollection)
         getItemCollection();
     }, []);
 
