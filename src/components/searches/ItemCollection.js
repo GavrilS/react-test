@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import ItemCard from './ItemCard';
-import AppContext from "../../context/test-app/AppContext";
+import AppContext from "../../context/test-app/appContext";
 
 const ItemCollection = () => {
     const appContext = useContext(AppContext);
