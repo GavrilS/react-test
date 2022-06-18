@@ -5,12 +5,14 @@ import Navbar from './components/layout/Navbar';
 
 function App() {
   return (
-    <div className='App'>
-      <Navbar />
-      <div className='container'>
-        <Home />
+    <Router>
+      <div className='App'>
+        <Navbar />
+        <div className='container'>
+          <Home />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
