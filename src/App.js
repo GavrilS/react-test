@@ -4,15 +4,11 @@ import Home from "./components/pages/Home";
 
 function App() {
   return (
-    <Router>
-      <div className='App'>
-        <div className='container'>
-          <Routes>
-            <Route exact path='/' component={Home} />
-          </Routes>
-        </div>
+    <div className='App'>
+      <div className='container'>
+        <Home />
       </div>
-    </Router>
+    </div>
   );
 }
 
