@@ -46,9 +46,9 @@ const ItemCollection = () => {
     //     }
     // ];
 
-    const itemContext = useContext(itemContext);
+    const context = useContext(itemContext);
 
-    const { itemList } = itemContext;
+    const { itemList } = context;
 
     return (
         <div style={itemStyle}>
