@@ -21,8 +21,8 @@ const Navbar = ({ icon, title }) => {
 };
 
 Navbar.defaultProps = {
-    title: '',
-    icon: ''
+    title: 'Analytics',
+    icon: 'fa-light fa-chart-network'
 };
 
 Navbar.propTypes = {
