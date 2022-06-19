@@ -50,13 +50,12 @@ const ItemState = (props) => {
 
     const [state, dispatch] = useReducer(itemReducer, initialState);
 
-    
+
 
     return (
         <itemContext.Provider
             value={{
-                itemList: state.itemList,
-                searchItems
+                itemList: state.itemList
             }}
         >
             {props.children}

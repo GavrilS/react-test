@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import ItemCard from "./ItemCard";
 import itemContext from "../../context/item/itemContext";
-import itemContext from "../../context/item/itemContext";
 
 const ItemCollection = () => {
     // let itemCollection = [
