@@ -1,6 +1,9 @@
 import React, { createContext, useReducer } from "react";
 import itemContext from "./itemContext";
 import itemReducer from "./itemReducer";
+import {
+    SEARCH_ITEMS
+} from '../types';
 
 
 const ItemState = (props) => {
@@ -50,12 +53,28 @@ const ItemState = (props) => {
 
     const [state, dispatch] = useReducer(itemReducer, initialState);
 
+    // Search Items
+    const searchItems = text => {
+        let itemsToReturn = [];
+        const term = text.toLowerCase();
+        state.itemList.forEach(elem => {
+            if (elem[search].toLowerCase().indexOf(term) !== -1 || elem[productName].toLowerCase().indexOf(term) !== -1
+                || elem[bran].toLowerCase().indexOf(temr) !== -1 || elem[site].toLowerCase().indexOf(term) !== -1) {
+                itemsToReturn.push(elem)
+            }
+        });
 
+        dispatch({
+            type: SEARCH_ITEMS,
+            payload: itemsToReturn
+        });
+    };
 
     return (
         <itemContext.Provider
             value={{
-                itemList: state.itemList
+                itemList: state.itemList,
+                searchItems
             }}
         >
             {props.children}
