@@ -2,7 +2,8 @@ import React, { createContext, useReducer } from "react";
 import itemContext from "./itemContext";
 import itemReducer from "./itemReducer";
 import {
-    SEARCH_ITEMS
+    SEARCH_ITEMS,
+    CLEAR_ITEMS
 } from '../types';
 
 
@@ -70,11 +71,22 @@ const ItemState = (props) => {
         });
     };
 
+    // Clear items
+    const clearItemList = () => {
+        let itemsToReturn = [];
+
+        dispatch({
+            type: CLEAR_ITEMS,
+            payload: itemsToReturn
+        });
+    };
+
     return (
         <itemContext.Provider
             value={{
                 itemList: state.itemList,
-                searchItems
+                searchItems,
+                clearItemList
             }}
         >
             {props.children}
