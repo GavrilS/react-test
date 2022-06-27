@@ -59,11 +59,15 @@ const ItemState = (props) => {
         let itemsToReturn = [];
         const term = text.toLowerCase();
         state.itemList.forEach(elem => {
-            if (elem[search].toLowerCase().indexOf(term) !== -1 || elem[productName].toLowerCase().indexOf(term) !== -1
-                || elem[bran].toLowerCase().indexOf(temr) !== -1 || elem[site].toLowerCase().indexOf(term) !== -1) {
-                itemsToReturn.push(elem)
-            }
+            // if (elem[search].toLowerCase().indexOf(term) !== -1 || elem[productName].toLowerCase().indexOf(term) !== -1
+            //     || elem[brand].toLowerCase().indexOf(temr) !== -1 || elem[site].toLowerCase().indexOf(term) !== -1) {
+            //     itemsToReturn.push(elem);
+            // }
+            console.log("ELEM in for each in searchItems is:!!!!!!!!!!!!!!!!!!!!!");
+            console.log(elem);
         });
+        console.log("!!!!!!!!!!!!STATE FROM state");
+        console.log(state.itemList);
 
         dispatch({
             type: SEARCH_ITEMS,
