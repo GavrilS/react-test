@@ -75,6 +75,11 @@ img {
     outline: none;
 }
 
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
 .btn-dark,
 .bg-dark,
 .badge-dark,
@@ -133,7 +138,7 @@ img {
     color: #888;
 }
 
-input[type='text'],
+/* input[type='text'],
 input[type='email'],
 input[type='password'],
 input[type='date'],
@@ -144,7 +149,7 @@ textarea {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
-}
+} */
 
 input[type='submit'],
 button {
